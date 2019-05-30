@@ -1,6 +1,6 @@
 {
   "name": "react-lazy-load-image-observer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The LazyLoadImage component allows you to lazy load images, or background-images, and set the observed element.",
   "author": "Jon K. Wheeler",
   "license": "MIT",
