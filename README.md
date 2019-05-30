@@ -1,23 +1,23 @@
-# react-lazy-load-image
+# react-lazy-load-image-observer
 
 The LazyLoadImage component allows you to lazy load images, or background-images, and set the observed element.
 
 ## Install
 
 ```js
-yarn add react-lazy-load-image
+yarn add react-lazy-load-image-observer
 ```
 
 or
 
 ```js
-npm install react-lazy-load-image
+npm install react-lazy-load-image-observer
 ```
 
 ## Import
 
 ```js
-import LazyLoadImage from 'react-lazy-load-image'
+import LazyLoadImage from 'react-lazy-load-image-observer'
 ```
 
 ## About
