@@ -34,10 +34,19 @@ If you omit `wrapperRef`, the observed elem will be `imageRef`. You can omit `ba
 
 ## Props
 
-| prop                    | desc                                                                                       |
-| ----------------------- | ------------------------------------------------------------------------------------------ |
-| <code>imageSrc</code>   | src of the image, `string`                                                                 |
-| <code>classAdded</code> | name of class added to the observed element once the image has loaded, default is `loaded` |
+| prop                         | desc                                                                                       |
+| ---------------------------- | ------------------------------------------------------------------------------------------ |
+| <code>imageSrc</code>        | src of the image, `string`                                                                 |
+| <code>classAdded</code>      | name of class added to the observed element once the image has loaded, default is `loaded` |
+| <code>observerOptions</code> | If you'd like to change any of the `IntersectionObserver` options, pass an `object`...     |
+
+```js
+observerOptions={{
+  rootMargin: '-10% 0% 0% 0%',
+  root: null,
+  threshold: 0
+}}
+```
 
 In order to animate, you'll have to add css in in regards to the `.loaded` class.
 

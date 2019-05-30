@@ -26,6 +26,7 @@ export class LazyLoadImage extends React.PureComponent {
       root: null,
       rootMargin: '-10% 0% 0% 0%',
       threshold: 0,
+      ...this.props.observerOptions,
     }
 
     this.observedElem = this.wrapper || this.image || this.background
@@ -46,7 +47,6 @@ export class LazyLoadImage extends React.PureComponent {
 
     myImage.onload = () => {
       if (this.background) this.background.style.backgroundImage = `url(${this.props.imageSrc})`
-
       this.observedElem.classList.add(this.props.classAdded)
       this.destroyObserver()
     }
@@ -66,10 +66,12 @@ export class LazyLoadImage extends React.PureComponent {
 LazyLoadImage.defaultProps = {
   classAdded: 'loaded',
   imageSrc: 'https://via.placeholder.com/350x150',
+  observerOptions: {},
 }
 
 LazyLoadImage.propTypes = {
   children: PropTypes.func,
   classAdded: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
+  observerOptions: PropTypes.object,
 }
